@@ -79,14 +79,16 @@ export const App = () => {
   }
 
   useEffect(() => {
-    if (!query) return;
+    if (!query) {
+      return
+    }
     setState({ pictures: [], loading: true, finish: false });
     fetchPictures();
   }, [query])
 
   useEffect(() => {
     if (!query) {
-      return;
+      return
     }
     fetchPictures();
   }, [page])
