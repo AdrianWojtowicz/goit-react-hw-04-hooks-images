@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "./Modal/Modal";
 import Searchbar from "./Searchbar/Searchbar";
 import Button from "./Button/Button";
@@ -84,6 +84,7 @@ export const App = () => {
     }
     setState({ pictures: [], loading: true, finish: false });
     fetchPictures();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query])
 
   useEffect(() => {
@@ -91,6 +92,7 @@ export const App = () => {
       return
     }
     fetchPictures();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page])
 
   return (
