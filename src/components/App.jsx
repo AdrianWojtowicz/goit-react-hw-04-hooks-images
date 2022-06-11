@@ -80,7 +80,7 @@ export const App = () => {
 
   useEffect(() => {
     if (!query) return;
-    setState({ pictures: [], isLoading: true, finish: false });
+    setState({ pictures: [], loading: true, finish: false });
     fetchPictures();
   }, [query])
 
